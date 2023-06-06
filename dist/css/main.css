@@ -1,0 +1,401 @@
+@import url("https://fonts.cdnfonts.com/css/chirp-2");
+* {
+  box-sizing: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Chirp", "ChirpExtended", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.twitter-main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 23% 1fr 33%;
+}
+.twitter-main .nav-container {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(215, 215, 215);
+}
+.twitter-main .nav-container .nav {
+  width: 70%;
+  padding-top: 20px;
+}
+.twitter-main .nav-container .nav .logo-container {
+  margin: 2px;
+}
+.twitter-main .nav-container .nav .logo-container .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition-duration: 0.25s;
+}
+.twitter-main .nav-container .nav .logo-container .logo:hover {
+  cursor: pointer;
+  background-color: rgb(211, 211, 211);
+}
+.twitter-main .nav-container .nav .navlist {
+  font-size: 1.3rem;
+}
+.twitter-main .nav-container .nav .navlist .nav-item {
+  padding: 10px 10px 10px 8px;
+  display: flex;
+  align-items: center;
+  border-radius: 45px;
+}
+.twitter-main .nav-container .nav .navlist .nav-item svg {
+  padding-right: 18px;
+}
+.twitter-main .nav-container .nav .navlist .nav-item:hover {
+  background-color: rgb(235, 235, 235);
+  cursor: pointer;
+}
+.twitter-main .nav-container .nav .tweet-btn {
+  color: white;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: rgb(39, 194, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-radius: 60px;
+}
+.twitter-main .nav-container .nav .tweet-btn:hover {
+  cursor: pointer;
+}
+.twitter-main .nav-container .nav .profile-container {
+  height: 60px;
+  width: 120%;
+  padding-top: 18px;
+}
+.twitter-main .nav-container .nav .profile-container .profile {
+  height: 45px;
+  padding: 8px;
+  margin-right: 20px;
+  display: grid;
+  grid-template-columns: 20% 1fr 15%;
+  align-items: center;
+  border-radius: 50px;
+  transition-duration: 0.5s;
+}
+.twitter-main .nav-container .nav .profile-container .profile img {
+  width: 40px;
+  -webkit-clip-path: circle();
+          clip-path: circle();
+}
+.twitter-main .nav-container .nav .profile-container .profile .name-n-tag {
+  font-size: 0.8rem;
+  margin: 5px 10px 5px 10px;
+}
+.twitter-main .nav-container .nav .profile-container .profile .name-n-tag .name {
+  font-weight: bold;
+}
+.twitter-main .nav-container .nav .profile-container .profile .name-n-tag .tag {
+  color: rgb(145, 145, 145);
+}
+.twitter-main .nav-container .nav .profile-container .profile .options {
+  padding: 5px;
+}
+.twitter-main .nav-container .nav .profile-container .profile:hover {
+  cursor: pointer;
+  background-color: rgb(206, 206, 206);
+}
+.twitter-main .nav-container::-webkit-scrollbar {
+  display: none;
+}
+.twitter-main .posts {
+  border-left: 1px solid rgb(229, 226, 226);
+  border-right: 1px solid rgb(229, 226, 226);
+  overflow-y: scroll;
+  height: 100vh;
+}
+.twitter-main .posts .header {
+  height: 108px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  border-bottom: 1px solid lightgrey;
+}
+.twitter-main .posts .header .heading {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 20px;
+}
+.twitter-main .posts .header .tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.twitter-main .posts .header .tabs .tab {
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+}
+.twitter-main .posts .header .tabs .tab .for-you {
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding-bottom: 15px;
+  border-bottom: 4px solid rgb(53, 198, 255);
+}
+.twitter-main .posts .post-container .tweet-now {
+  display: grid;
+  grid-template-rows: 1fr 45px;
+  border-bottom: 1px solid rgb(215, 215, 215);
+}
+.twitter-main .posts .post-container .tweet-now .enter-tweet {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+.twitter-main .posts .post-container .tweet-now .enter-tweet img {
+  -webkit-clip-path: circle();
+          clip-path: circle();
+}
+.twitter-main .posts .post-container .tweet-now .enter-tweet .enter {
+  padding-left: 15px;
+  color: rgb(72, 72, 72);
+  font-size: 1.3rem;
+  padding-top: 10px;
+}
+.twitter-main .posts .post-container .tweet-now .btns-container {
+  display: flex;
+}
+.twitter-main .posts .post-container .tweet-now .btns-container .btns {
+  display: flex;
+  flex-direction: row;
+  margin-left: 70px;
+}
+.twitter-main .posts .post-container .tweet-now .btns-container .btns .btn {
+  padding: 10px;
+}
+.twitter-main .posts .post-container .tweet-now .btns-container .tweet-btn {
+  height: 35px;
+  width: 80px;
+  background-color: rgb(54, 195, 250);
+  margin: 0 20px 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+}
+.twitter-main .posts .post-container .post {
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  border-bottom: 1px solid rgb(215, 215, 215);
+}
+.twitter-main .posts .post-container .post .profile {
+  padding: 20px 20px 0 20px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.twitter-main .posts .post-container .post .profile .primary {
+  -webkit-clip-path: circle();
+          clip-path: circle();
+}
+.twitter-main .posts .post-container .post .profile .line {
+  margin: 5px;
+  height: 100%;
+  width: 0px;
+  border: 1px solid rgb(206, 206, 206);
+}
+.twitter-main .posts .post-container .post .profile .secondary {
+  margin-bottom: 10px;
+  width: 35px;
+  -webkit-clip-path: circle();
+          clip-path: circle();
+}
+.twitter-main .posts .post-container .post .content {
+  margin-top: 25px;
+}
+.twitter-main .posts .post-container .post .content .handle-container {
+  display: flex;
+}
+.twitter-main .posts .post-container .post .content .handle-container .name {
+  padding-right: 5px;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+.twitter-main .posts .post-container .post .content .handle-container .handle {
+  color: grey;
+  margin: 0 5px 0 5px;
+}
+.twitter-main .posts .post-container .post .content .handle-container .time {
+  color: grey;
+}
+.twitter-main .posts .post-container .post .content .main-content {
+  color: rgb(45, 45, 45);
+  font-size: 0.95rem;
+}
+.twitter-main .posts .post-container .post .btns {
+  display: flex;
+  height: 50px;
+  align-items: center;
+}
+.twitter-main .posts .post-container .post .btn {
+  color: grey;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  margin: 0 15px 0 0px;
+}
+.twitter-main .posts .post-container .post .btn .count {
+  font-size: 0.8rem;
+  margin: 0 8px 0 8px;
+}
+.twitter-main .posts .post-container .show-thread {
+  padding: 10px 0 10px 0;
+  color: rgb(48, 196, 255);
+}
+.twitter-main .posts::-webkit-scrollbar {
+  display: none;
+}
+.twitter-main .rec {
+  overflow-y: scroll;
+  width: 100%;
+  height: 100vh;
+}
+.twitter-main .rec .search-container {
+  padding: 10px 15px 10px 30px;
+  width: 100%;
+}
+.twitter-main .rec .search-container .search {
+  height: 40px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  background-color: rgb(237, 237, 237);
+  color: grey;
+}
+.twitter-main .rec .search-container .search .icon {
+  margin: 18px;
+}
+.twitter-main .rec .trending-container {
+  background-color: rgb(237, 237, 237);
+  border-radius: 18px;
+  width: 80%;
+  margin-top: 15px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.twitter-main .rec .trending-container .trending {
+  padding: 18px;
+}
+.twitter-main .rec .trending-container .trending .heading {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.twitter-main .rec .trending-container .trending .trends {
+  margin-top: 30px;
+  font-size: 0.9rem;
+}
+.twitter-main .rec .trending-container .trending .trends .top-trend {
+  display: flex;
+}
+.twitter-main .rec .trending-container .trending .trends .top-trend .content {
+  margin-top: 5px;
+}
+.twitter-main .rec .trending-container .trending .trends .top-trend .content .title {
+  font-weight: bold;
+}
+.twitter-main .rec .trending-container .trending .trends .top-trend .content .subtitle {
+  font-size: 0.7rem;
+  margin-bottom: 3px;
+}
+.twitter-main .rec .trending-container .trending .trends .top-trend img {
+  border-radius: 10px;
+  margin-left: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 65px;
+  height: 70px;
+}
+.twitter-main .rec .trending-container .trending .trends .trend {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0 15px 0;
+}
+.twitter-main .rec .trending-container .trending .trends .trend .content {
+  margin-top: 5px;
+}
+.twitter-main .rec .trending-container .trending .trends .trend .content .title {
+  font-weight: bolder;
+  margin: 5px 0 5px 0;
+}
+.twitter-main .rec .trending-container .trending .trends .trend .content .subtitle {
+  font-size: 0.7rem;
+  margin-bottom: 3px;
+}
+.twitter-main .rec .trending-container .trending .trends .trend .content .tweets-count {
+  font-size: 0.7rem;
+}
+.twitter-main .rec .trending-container .trending .trends .trend img {
+  border-radius: 10px;
+  margin-left: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 65px;
+  height: 70px;
+}
+.twitter-main .rec .follow-container {
+  background-color: rgb(237, 237, 237);
+  border-radius: 18px;
+  width: 80%;
+  margin-top: 15px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.twitter-main .rec .follow-container .follow-rec {
+  padding: 18px;
+}
+.twitter-main .rec .follow-container .follow-rec .heading {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.twitter-main .rec .follow-container .follow-rec .accounts .acc {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+.twitter-main .rec .follow-container .follow-rec .accounts .acc img {
+  width: 55px;
+  -webkit-clip-path: circle();
+          clip-path: circle();
+  margin: 10px 10px 10px 0;
+}
+.twitter-main .rec .follow-container .follow-rec .accounts .acc .name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.twitter-main .rec .follow-container .follow-rec .accounts .acc .follow-btn {
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  margin-left: auto;
+  padding: 10px 18px 10px 18px;
+  border-radius: 40px;
+}
+.twitter-main .rec::-webkit-scrollbar {
+  display: none;
+}/*# sourceMappingURL=main.css.map */
